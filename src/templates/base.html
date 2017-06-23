@@ -2,28 +2,17 @@
 <html lang=en>
 
 <head>
+<title>{% block head_title %}MuyPicky.com{% endblock head_title %}</title>
 </head>
 <body>
-<h1>Hello World!</h1>
-<p>
-    This is <code>{% verbatim %}{{ html_var }}{% endverbatim %}</code> coming through
-</p>
-<p>
-{% if num is not None %}
-Random number is {{ num }}
-{% endif %}
-</p>
-<p>
-{% for some_item in some_list %}
-    {% if some_item|divisibleby:"2" %}
-            Even number
-    {% endif %}
-    
-    {{ some_item }}<br/>
+<h1>MuyPicky.com</h1>
+<a href='/'>Home</a>
+<a href='/about/'>About</a>
+<a href='/contact/'>Contact</a>
 
-{% endfor %}
-</p>
-<p>Some item is {{ some_item }} </p>
+<div class='container'>
+{% block content %}{% endblock content %}
+</div>
 
 </body>
 </html>
