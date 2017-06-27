@@ -62,7 +62,19 @@ For your reference
 
 [25 - The Power of Django Forms](../../tree/ac75e86395e0e7fa0e33f832348f12f3efa43bac)
 
-[26 - The Extra Power of Django Model Forms](../../tree/)
+[26 - The Extra Power of Django Model Forms](../../tree/0a77bc2ce3e6873d65e2c72f266d8826b072ea91)
 
 [27 - Simple + Effective Validation](../../tree/5d17143758ce9ac88d9a0f7a018ea816716d7fa8)
+
+[28 - Letting Users own Data](../../tree/76516cd04e670471ed7ef0b4a686ac6e85328153)
+
+[29 - Associate User to Form Data in FBV](../../tree/9b4fc1b04541a0b51b63bc3be5b16456fb411564)
+
+[30 - Associate User to Data in Class View](../../tree/8a75bdc160e05d1b58a838276f79cc023f06f98d)
+
+[31 - Login Required to View](../../tree/008d1c90ba02e3341a2bc8f2ef4bf6fb49230401)
+
+[32 - LoginView](../../tree/da86b59355f78d19bb7e2af477d47927e89b7f1c)
+
+[33 - Using Reverse to Shortcut URLs](../../tree/ac5ae43e22007b7a88f0b54efc8c250ec8fc55bb)
 
