@@ -1,6 +1,7 @@
 <div class='container'>
 <h1>MuyPicky.com</h1>
-<a href='/'>Home</a>
-<a href='/about/'>About</a>
-<a href='/contact/'>Contact</a>
+<a href='{% url "home" %}'>Home</a>
+<a href='{% url "about" %}'>About</a>
+<a href='{% url "contact" %}'>Contact</a>
+<a href='{% url "restaurants:list" %}'>Restaurants</a>
 </div>
