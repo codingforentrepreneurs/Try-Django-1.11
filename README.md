@@ -31,3 +31,38 @@ For your reference
 [9 - Template Inheritance](../../tree/01c54567daa8dda4b90df12a1b4a94e9b42c8206)
 
 [10 - Include Template Tag](../../tree/6413d426f319669df9202fd98ec38f3e55d5df3b)
+
+11 - Reactivate Virtualenv // no code 
+
+[12 - Class Based Views](../../tree/cb9b19a3b08fd9af59c7f59eca1a3a68af410304)
+
+[13 - Template View](../../tree/47a2ff1af57f3ab4156a5f4142cede762e6d5e4e)
+
+[14 - Remembering things with Models](../../tree/df96b79cd3885e11ed0a91b29463739da5490a67)
+
+[15 - More on Model Fields](../../tree/4e9dfaf954057eade4a7b70f931791cef5b9d639)
+
+[16 - Displaying Saved Data](../../tree/84d7e1100f435ca1db9d3c29a7204756340fb6ed)
+
+[17 - Understanding Querysets](../../tree/96e6c820a095f799caf1586e1380002851156fa4)
+
+[18 - Generic List View](../../tree/26cc050bc69587622c8311504318f3565bd37e7e)
+
+[19 - Restaurant Profile Detail](../../tree/03e4bad83cdb7e5fe1bf84c009cdecc6149374bf)
+
+[20 - SlugField & Unique Slug Generator](../../tree/841ed24dcc21bef9be86d74d4ec30b8fe42ab376)
+
+[21 - Signal for Unique Slug](../../tree/acc9519afefe36db48f233c58e06dbd6397d56b1)
+
+[22 - Slugs as URL Params](../../tree/970f0e562cdf1c31d2b556bd0dd5b5c92b5bba71)
+
+[23 - Get Single Items from the DB](../../tree/6fb730eefa0c73eec319144e6de9feee128a962b)
+
+[24 - Saving Data the Hard + Wrong Way](../../tree/1f20ab14a4529cd4233bd7ca34e16f07cc427d09)
+
+[25 - The Power of Django Forms](../../tree/ac75e86395e0e7fa0e33f832348f12f3efa43bac)
+
+[26 - The Extra Power of Django Model Forms](../../tree/)
+
+[27 - Simple + Effective Validation](../../tree/5d17143758ce9ac88d9a0f7a018ea816716d7fa8)
+
