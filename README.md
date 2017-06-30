@@ -78,3 +78,12 @@ For your reference
 
 [33 - Using Reverse to Shortcut URLs](../../tree/ac5ae43e22007b7a88f0b54efc8c250ec8fc55bb)
 
+[38 - User Profile View](../../tree/bd786e5fa901880519c96c42b9e150df9e151841)
+
+[37 - Personalize Items](../../tree/308ece4676c72133da7e9d7c6fa54567e9e1f15f)
+
+[36 - Limiting Form Field to QuerySet](../../tree/e6dd0d3f14355a7d66f91c95983aa109843e2e6a)
+
+[35 - Menu Item Views](../../tree/629ce3c85026201f5dcdb633455d739d2c97eaa5)
+
+[34 - Menu Items App](../../tree/a61c5ad1e2825772bce8ee3dfd82b0cd4641cedf)
