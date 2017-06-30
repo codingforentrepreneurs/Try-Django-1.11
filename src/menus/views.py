@@ -40,7 +40,7 @@ class ItemCreateView(LoginRequiredMixin, CreateView):
 
 
 class ItemUpdateView(LoginRequiredMixin, UpdateView):
-    template_name = 'form.html'
+    template_name = 'menus/detail-update.html'
     form_class = ItemForm
 
     def get_queryset(self):

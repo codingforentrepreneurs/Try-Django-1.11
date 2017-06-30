@@ -3,12 +3,15 @@
 {% block head_title %}Restaurants | {{ block.super}}{% endblock head_title %}
 
 {% block content %}
-<h1>Restaurant List</h1>
+<h1>My Restaurants <small><a href='{% url "restaurants:create" %}'>Add</a></small></h1>
 
 <ul>
 {% for obj in object_list %}
     <li><a href='{{ obj.get_absolute_url }}'>{{ obj }}</a><br/>
     {{ obj.name }} {{ obj.location }} {{ obj.category }} {{ obj.timestamp }} {{ obj.updated }}</li>
+{% empty %}
+    <li><a href='{% url "restaurants:create" %}'>Add One</a></li>
+
 {% endfor %}
 </ul>
 {% endblock %}
