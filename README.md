@@ -92,3 +92,13 @@ For your reference
 
 [40 - Adding a Robust Search](../../tree/295a30102d498fae4e5903cf977124abac467630)
 
+[41 - Follow Users](../../tree/33156913213bd785afddb67dc9efa1c3efe2cbe0)
+
+[42 - Follow Button Form](../../tree/63a05f38a5cfa8b522b0041c0cba47c95b9b3dbc)
+
+[43 - Following Home Page Feed](../../tree/b5d0894ab5374be3d5818574b2d8f22dd858b230)
+
+[44 - Register View](../../tree/02e6e4f904cc48294be18fc9312dae9076fab8b6)
+
+[45 - Activation Keys](../../tree/4f8765494735582b16951a0f9827d193bb179ee6)
+
