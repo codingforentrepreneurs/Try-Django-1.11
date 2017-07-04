@@ -2,7 +2,11 @@
 
 # Try Django 1.11
 
-__coming soon__
+Learn the fundamentals behind one of the most popular web frameworks in the world: Django. We will teach you step-by-step how to implement concepts like Views, Template Rendering, Forms, Saving Data, URL routing, Deployment aka Going Live, and so much more. 
+
+Django is a web-framework written in Python and runs the backend for many of the internet's most popular websites such as Instagram and Pinterest. 
+
+Get started today!
 
 
 The tutorial videos are available on our [YouTube channel](http://joincfe.com/youtube) and ad-free on [Coding for Entrepreneurs](http://joincfe.com/projects/).
