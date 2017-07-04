@@ -3,6 +3,8 @@
 {% block head_title %}Menu Items | {{ block.super}}{% endblock head_title %}
 
 {% block content %}
+<div class='row'>
+<div class='col-sm-6 col-sm-offset-3'>
 <h1>{{ object.name }}</h1>
 <p>Location: {{ object.restaurant.name }}</p>
 {% if object.contents %}
@@ -23,6 +25,8 @@ Excludes
     {% endfor %}
 
 </ul>
+</div>
+</div>
 {% endif %}
 
 

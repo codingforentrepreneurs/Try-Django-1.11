@@ -3,6 +3,8 @@
 {% block head_title %}Menu Items | {{ block.super}}{% endblock head_title %}
 
 {% block content %}
+<div class='row'>
+<div class='col-sm-6 col-sm-offset-3'>
 <h1>Menu Items <small><a href='{% url "menus:create" %}'>Add</a></small></h1>
 
 <ul>
@@ -32,6 +34,9 @@
     </li>
     {% empty %}
     <li><a href='{% url "menus:create" %}'>Add Menu Item</a></li>
+</ul>
+</div>
+</div>
 {% endfor %}
 </ul>
 {% endblock %}

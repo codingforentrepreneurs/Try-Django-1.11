@@ -7,6 +7,14 @@
 </head>
 <body>
 {% include 'snippets/nav.html' %}
+{% if messages %}
+<div class="alert messages text-center">
+    {% for message in messages %}
+    <b>{{ message }}</b><br/>
+    {% endfor %}
+
+</div>
+{% endif %}
 
 <div class='container'>
 {% block content %}{% endblock content %}

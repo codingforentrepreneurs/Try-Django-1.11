@@ -3,7 +3,11 @@
 {% block head_title %}{{ title }} | {{ block.super}}{% endblock head_title %}
 
 {% block content %}
+<div class='row'>
+<div class='col-sm-6 col-sm-offset-3'>
 <h1>{{ title }}</h1>
 
 {% include 'snippets/form-snippet.html' %}
+</div>
+</div>
 {% endblock %}

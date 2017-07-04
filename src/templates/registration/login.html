@@ -2,11 +2,14 @@
 
 {% block content %}
 
+  <div class='row'>
+    <div class='col-sm-6 text-center col-sm-offset-3'>
+    <h1>Login</h1>
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
 
-{% if next %}
+{% if next != "/" and next is not None %}
     {% if user.is_authenticated %}
     <p>Your account doesn't have access to this page. To proceed,
     please login with an account that has access.</p>
@@ -22,6 +25,10 @@
 <input type="submit" value="login" />
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
+
+<p>Need to <a href='{% url "register" %}'>register</a>?</p>
+</div>
+</div>
 
 {# Assumes you setup the password_reset view in your URLconf #}
 

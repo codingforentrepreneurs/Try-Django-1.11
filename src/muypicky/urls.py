@@ -5,12 +5,13 @@ from django.views.generic import TemplateView
 
 from django.contrib.auth.views import LoginView, LogoutView
 
-from menus.views import HomeView
+from menus.views import HomeView, AllUserRecentItemListView
 from profiles.views import ProfileFollowToggle, RegisterView, activate_user_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', HomeView.as_view(), name='home'),
+    url(r'^recent/$', AllUserRecentItemListView.as_view(), name='recent'),
     url(r'^register/$', RegisterView.as_view(), name='register'),
     url(r'^activate/(?P<code>[a-z0-9].*)/$', activate_user_view, name='activate'),
     url(r'^login/$', LoginView.as_view(), name='login'),

@@ -3,7 +3,10 @@
 {% block head_title %}Restaurants | {{ block.super}}{% endblock head_title %}
 
 {% block content %}
+<div class='row'>
+<div class='col-sm-6 col-sm-offset-3'>
 <h1>{{ object.title }} <small> {{ object.category }}</small></h1>
 <p>{{ object.location }}</p>
 <p>{{ object.timestamp }}, Updated {{ object.updated|timesince }} ago</p>
+</div>
 {% endblock %}

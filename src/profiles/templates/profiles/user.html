@@ -3,9 +3,15 @@
 {% block head_title %}{{ user.username }} | {{ block.super}}{% endblock head_title %}
 
 {% block content %}
-<h1>{{ user.username }}</h1>
-<p>{% include 'profiles/snippet/follow_form.html' with username=user.username is_following=is_following %}</p>
+  <div class='row'>
+    <div class='col-sm-6 text-center col-sm-offset-3'>
 
+<h1>{{ user.username }}</h1>
+{% if request.user.is_authenticated %}
+<p>{% include 'profiles/snippet/follow_form.html' with username=user.username is_following=is_following %}</p>
+{% else %}
+<p><i>Login to follow</i></p>
+{% endif %}
 
 <form class='form' method='GET' action='.'>
 <input type='text' placeholder="Search.." name='q' value='{{ request.GET.q }}'>
@@ -22,17 +28,13 @@
             <a href='{{ request.path}}?q= {{ rest.category }}'> {{ rest.category }}</a>
            
             </p>
-            <p>
-            <ul>
                 {% for item in rest.item_set.all %}
-                    <li style='margin-bottom: 15px;'><b>{{ item.name }}</b><br/>
+                    <div style='margin-bottom: 15px;'><b>{{ item.name }}</b><br/>
                         {% for ing in item.get_contents %}
                             <a href='{{ request.path}}?q={{ ing}}'>{{ ing}}</a>
                         {% endfor %}
-                    </li>
+                    </div>
                 {% endfor %}
-            </ul>
-            </p>
         </div>
     </div>
     </div>
@@ -43,4 +45,11 @@
 <p class='lead'>No Items Found</p>
 {% endif %}
 
+
+
+</div>
+</div>
 {% endblock %}
+
+
+

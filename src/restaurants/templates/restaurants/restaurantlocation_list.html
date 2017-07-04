@@ -3,6 +3,8 @@
 {% block head_title %}Restaurants | {{ block.super}}{% endblock head_title %}
 
 {% block content %}
+<div class='row'>
+<div class='col-sm-6 col-sm-offset-3'>
 <h1>My Restaurants <small><a href='{% url "restaurants:create" %}'>Add</a></small></h1>
 
 <ul>
@@ -14,4 +16,8 @@
 
 {% endfor %}
 </ul>
+
+</div>
+
+</div>
 {% endblock %}

@@ -1,27 +1,41 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% if not request.user.is_authenticated %}
+    <div class='row'>
+    <div class='col-sm-6 col-sm-offset-3 text-center'>
+    <p class='lead'>
+    Share your pickiness with your friends. Add the restaurants add menu items like most so they get it right every time.<br/>
 
-<h1>Hello World!</h1>
-<h3>{{ block.super }}</h3>
-<p>
-    This is <code>{% verbatim %}{{ html_var }}{% endverbatim %}</code> coming through
-</p>
-<p>
-{% if num is not None %}
-Random number is {{ num }}
+    <a href='{% url "register" %}'>Join us</a> 
+    </p>
+    <hr/>
+    </div>
+
+    </div>
 {% endif %}
-</p>
-<p>
-{% for some_item in some_list %}
-    {% if some_item|divisibleby:"2" %}
-            Even number
-    {% endif %}
-    
-    {{ some_item }}<br/>
+<div class='row'>
+<div class='col-sm-6 col-sm-offset-3'>
+<h3>Recent Items</h3>
+{% for obj in object_list %}
+
+
+        <div class='thumbnail'> 
+            <h3><a href='{% url "profiles:detail" username=obj.user.username %}'>{{ obj.user.username }}</a></h3>
+            <h4>{{ obj.name }}</h4>
+            <p><a href='{% url "profiles:detail" username=obj.user.username %}?q={{ obj.restaurant.title }}'>{{ obj.restaurant.title }}</a>| <a href='{% url "profiles:detail" username=obj.user.username %}?q={{ obj.restaurant.location }}'>{{ obj.restaurant.location }}</a> | <a href='{% url "profiles:detail" username=obj.user.username %}?q={{ obj.restaurant.category }}'>{{ obj.restaurant.category }}</a></p>
+            <p>
+            <b>{{ obj.name }}:</b> with
+             {% for ing in obj.get_contents %}
+                <a href='{% url "profiles:detail" username=obj.user.username %}?q={{ ing}}'>{{ ing}}</a>
+            {% endfor %}
+            </p>
+        </div>
+
+
 
 {% endfor %}
-</p>
-<p>Some item is {{ some_item }} </p>
 
+</div>
+</div>
 {% endblock content %}

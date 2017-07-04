@@ -3,6 +3,8 @@
 {% block head_title %}{{ form.instance.name }} | Menu Items | {{ block.super}}{% endblock head_title %}
 
 {% block content %}
+<div class='row'>
+<div class='col-sm-6 col-sm-offset-3'>
 <h1>{{ form.instance.name }}</h1>
 <p>Location: {{ form.instance.restaurant.name }}</p>
 {% if form.instance.contents %}
@@ -29,5 +31,10 @@ Excludes
 <h3>Make changes</h3>
 {% include 'snippets/form-snippet.html' with form=form %}
 
-
+</div>
+</div>
 {% endblock %}
+
+
+
+

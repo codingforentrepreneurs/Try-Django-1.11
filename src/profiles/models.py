@@ -40,19 +40,20 @@ class Profile(models.Model):
             self.save()
             #path_ = reverse()
             path_ = reverse('activate', kwargs={"code": self.activation_key})
+            full_path = "https://muypicky.com" + path_
             subject = 'Activate Account'
             from_email = settings.DEFAULT_FROM_EMAIL
-            message = f'Activate your account here: {path_}'
+            message = f'Activate your account here: {full_path}'
             recipient_list = [self.user.email]
-            html_message = f'<p>Activate your account here: {path_}</p>'
+            html_message = f'<p>Activate your account here: {full_path}</p>'
             print(html_message)
-            # sent_mail = send_mail(
-            #                 subject, 
-            #                 message, 
-            #                 from_email, 
-            #                 recipient_list, 
-            #                 fail_silently=False, 
-            #                 html_message=html_message)
+            sent_mail = send_mail(
+                            subject, 
+                            message, 
+                            from_email, 
+                            recipient_list, 
+                            fail_silently=False, 
+                            html_message=html_message)
             sent_mail = False
             return sent_mail
 
@@ -64,7 +65,7 @@ def post_save_user_receiver(sender, instance, created, *args, **kwargs):
         profile, is_created = Profile.objects.get_or_create(user=instance)
         default_user_profile = Profile.objects.get_or_create(user__id=1)[0] #user__username=
         default_user_profile.followers.add(instance)
-        profile.followers.add(default_user_profile.user)
-        profile.followers.add(2)
+        #profile.followers.add(default_user_profile.user)
+        #profile.followers.add(2)
 
 post_save.connect(post_save_user_receiver, sender=User)
