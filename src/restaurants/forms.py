@@ -32,6 +32,13 @@ class RestaurantLocationCreateForm(forms.ModelForm):
         if name == "Hello":
             raise forms.ValidationError("Not a valid name")
         return name
+   
+    def clean_slug(self):
+        slug = self.cleaned_data.get('slug')
+        if RestaurantLocation.objects.filter(slug=slug).exclude(pk=self.instance.pk).exists():
+            raise forms.ValidationError(f"slug '{slug}' already used")
+        return slug
+
 
     # def clean_email(self):
     #     email = self.cleaned_data.get("email")
